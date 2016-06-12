@@ -57,7 +57,7 @@
 
         <div id="container">
             <div id="content1">
-                <h1><span>Jonathan</span><span>Chue -</span></h1>
+                <h1><span>Jonathan</span><span>Chue</span></h1>
                 <div id="triangle"></div>
                 <ul id="roles">
                     <li>Senior Analyst at Accenture</li>
