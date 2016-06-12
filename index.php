@@ -5,7 +5,7 @@
         <title>Jonathan Chue</title>
         <meta name="description" content="Consultant, front-end web developer, amateur photographer." />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
