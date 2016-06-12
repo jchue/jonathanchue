@@ -116,4 +116,17 @@ a {
       top: -20px;
       z-index: 1; }
 
+.site-footer {
+  color: #fff;
+  bottom: 0;
+  font-size: 11px;
+  padding: 0 5px 2px 0;
+  position: absolute;
+  right: 0;
+  text-align: right; }
+  @media (max-width: 400px) {
+    .site-footer {
+      left: 0;
+      text-align: center; } }
+
 /*# sourceMappingURL=style.css.map */

@@ -77,5 +77,9 @@
                 <li><a href="https://500px.com/jonathanchue" target="_blank"><i class="fa fa-500px"></i><span>500px</span></a></li>
             </ul>
         </div>
+
+        <footer class="site-footer">
+            Copyright &copy; 2016 Jonathan Chue
+        </footer>
     </body>
 </html>
