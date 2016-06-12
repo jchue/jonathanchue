@@ -40,34 +40,34 @@ a {
   margin: 0 auto 30px auto;
   width: 90%; }
 
-#roles {
+.roles {
   padding-left: 0;
   margin: 0 0 30px; }
-  #roles li {
+  .roles li {
     border-right: 1px solid #000;
     display: inline-block;
     font-size: 13px;
     margin: 0 0 0 5px;
     padding: 0 5px 0 0; }
-    #roles li:last-child {
+    .roles li:last-child {
       border-right: none; }
     @media (max-width: 480px) {
-      #roles li {
+      .roles li {
         border-right: none;
         display: block; } }
 
-#links {
+.links {
   display: block;
   margin: auto;
   padding: 0;
   position: relative;
   text-align: center; }
-  #links li {
+  .links li {
     display: inline-block;
     font-size: 20px;
     list-style-type: none; }
     @media (max-width: 400px) {
-      #links li {
+      .links li {
         display: block;
         left: 0;
         position: relative;
@@ -77,15 +77,15 @@ a {
         -ms-transition: left 0.15s ease-in-out;
         -o-transition: left 0.15s ease-in-out;
         transition: left 0.15s ease-in-out; }
-        #links li:hover {
+        .links li:hover {
           left: 10px; } }
-    #links li a {
+    .links li a {
       padding: 0 10px; }
       @media (max-width: 400px) {
-        #links li a {
+        .links li a {
           display: block;
           padding: 2px 0; } }
-    #links li span {
+    .links li span {
       display: block;
       font-family: Arial;
       font-size: 12px;
@@ -103,7 +103,7 @@ a {
       transition: opacity 0.25s ease-in-out, top 0.2s ease-in-out;
       z-index: -1; }
       @media (max-width: 400px) {
-        #links li span {
+        .links li span {
           display: inline;
           font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
           font-size: 14px;
@@ -111,7 +111,7 @@ a {
           margin-left: 8px;
           opacity: 1;
           position: static; } }
-    #links li:hover span {
+    .links li:hover span {
       opacity: 1;
       top: -20px;
       z-index: 1; }

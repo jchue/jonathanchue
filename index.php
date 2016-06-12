@@ -58,7 +58,8 @@
 
         <div class="container">
             <h1>Jonathan Chue</h1>
-            <ul id="roles">
+
+            <ul class="roles">
                 <li>Senior Analyst at Accenture</li>
                 <li>Front-end Web Developer</li>
                 <li>Amateur Photographer</li>
@@ -66,7 +67,7 @@
 
             <div class="hr"></div>
 
-            <ul id="links">
+            <ul class="links">
                 <li><a href="http://www.aptribute.com" target="_blank"><i class="fa fa-laptop"></i><span>Web Dev Portfolio</span></a></li>
                 <li><a href="http://www.jonathanchue.com/blog/" target="_blank"><i class="fa fa-wordpress"></i><span>Blog</span></a></li>
                 <li><a href="https://www.flickr.com/photos/96956660@N06/" target="_blank"><i class="fa fa-flickr"></i><span>Flickr</span></a></li>
