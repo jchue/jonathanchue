@@ -3,10 +3,11 @@
 <html>
     <head>
         <title>Jonathan Chue</title>
-        <meta name="description" content="Consultant, front-end web developer, amateur photographer." />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+        <meta name="description" content="Consultant, front-end web developer, amateur photographer.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <?php
@@ -55,9 +56,9 @@
             ga( 'send', 'pageview' );
         </script>
 
-        <div id="container">
+        <div class="container">
             <div id="content1">
-                <h1><span>Jonathan</span><span>Chue</span></h1>
+                <h1>Jonathan Chue</h1>
                 <div id="triangle"></div>
                 <ul id="roles">
                     <li>Senior Analyst at Accenture</li>
@@ -65,7 +66,7 @@
                     <li>Amateur Photographer</li>
                 </ul>
             </div>
-            <div id="content-separator"></div>
+            <div class="hr"></div>
             <div id="content2">
                 <ul id="links">
                     <li><a href="http://www.aptribute.com" target="_blank"><i class="fa fa-laptop"></i><span>Web Dev Portfolio</span></a></li>
