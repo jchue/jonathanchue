@@ -59,7 +59,6 @@
         <div class="container">
             <div id="content1">
                 <h1>Jonathan Chue</h1>
-                <div id="triangle"></div>
                 <ul id="roles">
                     <li>Senior Analyst at Accenture</li>
                     <li>Front-end Web Developer</li>

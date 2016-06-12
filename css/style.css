@@ -36,19 +36,6 @@ h1 {
   text-transform: uppercase;
   z-index: 2; }
 
-#triangle:after {
-  color: rgba(255, 255, 255, 0.6);
-  content: "\025BD";
-  line-height: 0;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 420px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 60px;
-  z-index: 1; }
-
 .hr {
   background-color: #000;
   height: 1px;
