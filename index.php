@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        
+
         <?php
         $bg = '';
         $n = rand( 1, 6 );
@@ -42,7 +42,7 @@
             }
         </style>';
         ?>
-        
+
     </head>
     <body>
         <script>
@@ -54,10 +54,10 @@
             ga( 'create', 'UA-34369086-2', 'auto' );
             ga( 'send', 'pageview' );
         </script>
-        
+
         <div id="container">
             <div id="content1">
-                <h1><span>Jonathan</span><span>Chue</span></h1>
+                <h1><span>Jonathan</span><span>Chue -</span></h1>
                 <div id="triangle"></div>
                 <ul id="roles">
                     <li>Senior Analyst at Accenture</li>
