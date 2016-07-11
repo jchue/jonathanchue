@@ -3,3 +3,5 @@ blog
 deploy
 projects
 photos
+css/.sass-cache
+*.css.map
