@@ -1,98 +1,27 @@
-<!DOCTYPE html>
+<div class="message" ng-class="{error: !success, success: success}" ng-show="response">{{ response }}</div>
 
-<html>
-    <head>
-        <title>Jonathan Chue</title>
-        <meta name="description" content="Consultant, front-end web developer, amateur photographer.">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<form method="post" name="contactForm" class="contact" ng-show="!success" ng-submit="processForm()">
+    <label for="name">
+        Name
+        <span class="error" ng-show="contactForm.name.$dirty && contactForm.name.$error.required">Required</span>
+    </label>
+    <input type="text" name="name" id="name" ng-model="formData.name" required>
 
-        <?php
-        $bg = '';
-        $n = rand( 1, 6 );
-        switch( $n ) {
-            case 1:
-                $bg = 'DSC_0082-0084_pano';
-                break;
-            case 2:
-                $bg = 'DSC_0085';
-                break;
-            case 3:
-                $bg = 'DSC_0092-0093_pano';
-                break;
-            case 4:
-                $bg = 'DSC_0093';
-                break;
-            case 5:
-                $bg = 'DSC_0101';
-                break;
-            case 6:
-                $bg = 'DSC_0244';
-                break;
-        }
+    <label for="email">
+        Email
+        <span class="error" ng-show="contactForm.email.$dirty && contactForm.email.$error.required">Required</span>
+        <span class="error" ng-if="contactForm.email.$viewValue.length>0 && contactForm.email.$invalid">Invalid Email</span>
+    </label>
+    <input type="email" name="email" id="email" ng-model="formData.email" required>
 
-        echo '<style>
-            html {
-                background-attachment: fixed;
-                background-image: url(images/' . $bg . '.jpg);
-                background-repeat: no-repeat;
-                background-size: cover !important;
-            }
-        </style>';
-        ?>
 
-    </head>
-    <body>
-        <script>
-            ( function( i, s, o, g, r, a ,m ) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
-                ( i[r].q = i[r].q || [] ).push( arguments )}, i[r].l = 1 * new Date(); a = s.createElement( o ),
-                m = s.getElementsByTagName( o )[0]; a.async = 1; a.src = g; m.parentNode.insertBefore( a, m )
-            })( window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga' );
+    <label for="message">
+        Message
+        <span class="error" ng-show="contactForm.message.$dirty && contactForm.message.$error.required">Required</span>
+    </label>
+    <textarea name="message" id="message" ng-model="formData.message" required></textarea>
 
-            ga( 'create', 'UA-34369086-2', 'auto' );
-            ga( 'send', 'pageview' );
-        </script>
+    <input type="text" name="url" class="hidden" ng-model="formData.url" />
 
-        <div class="container">
-            <h1>Jonathan Chue</h1>
-
-            <ul class="roles">
-                <li>Senior Analyst at Accenture</li>
-                <li>Front-end Web Developer</li>
-                <li>Amateur Photographer</li>
-            </ul>
-
-            <div class="hr"></div>
-
-            <ul class="links">
-                <li><a href="http://www.aptribute.com" target="_blank"><i class="fa fa-laptop"></i><span>Web Dev Portfolio</span></a></li>
-                <li><a href="http://www.jonathanchue.com/blog/" target="_blank"><i class="fa fa-wordpress"></i><span>Blog</span></a></li>
-                <li><a href="https://www.flickr.com/photos/96956660@N06/" target="_blank"><i class="fa fa-flickr"></i><span>Flickr</span></a></li>
-                <li><a href="https://www.instagram.com/jonathanchue/" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
-                <li><a href="https://www.linkedin.com/in/jonathan-chue-2b83b233" target="_blank"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a></li>
-                <li><a href="https://twitter.com/jonathanchue" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                <li><a href="https://500px.com/jonathanchue" target="_blank"><i class="fa fa-500px"></i><span>500px</span></a></li>
-            </ul>
-
-            <form action="" method="post">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </div>
-
-        <footer class="site-footer">
-            Copyright &copy; 2016 Jonathan Chue
-        </footer>
-    </body>
-</html>
+    <button type="submit" class="wide-button" ng-disabled="contactForm.$invalid">Send</button>
+</form>
