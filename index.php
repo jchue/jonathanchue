@@ -11,38 +11,36 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <?php
-        $bg = '';
-        $n = rand( 1, 6 );
-        switch( $n ) {
-            case 1:
-                $bg = 'DSC_0082-0084_pano';
-                break;
-            case 2:
-                $bg = 'DSC_0085';
-                break;
-            case 3:
-                $bg = 'DSC_0092-0093_pano';
-                break;
-            case 4:
-                $bg = 'DSC_0093';
-                break;
-            case 5:
-                $bg = 'DSC_0101';
-                break;
-            case 6:
-                $bg = 'DSC_0244';
-                break;
-        }
+            // create a new cURL resource
+            $ch = curl_init();
+
+            // set URL and other appropriate options
+            curl_setopt( $ch, CURLOPT_URL, "http://www.jonathanchue.dev/photos.json" );
+            // Will return the response, if false it print the response
+            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+            curl_setopt( $ch, CURLOPT_HEADER, 0 );
+
+            // grab URL and pass it to the browser
+            $result = curl_exec( $ch );
+
+            // close cURL resource, and free up system resources
+            curl_close( $ch );
+
+            $bg = json_decode( $result, true );
+            $n = rand( 1, 6 );
+            $n--;
+
 
         echo '<style>
             html {
                 background-attachment: fixed;
-                background-image: url(images/' . $bg . '.jpg);
+                background-image: url(images/' . $bg[$n]["file"] . '.jpg);
                 background-repeat: no-repeat;
                 background-size: cover !important;
             }
         </style>';
-        ?>
+
+         ?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
@@ -60,6 +58,14 @@
             ga( 'create', 'UA-34369086-2', 'auto' );
             ga( 'send', 'pageview' );
         </script>
+
+        <?php
+            if ( ! empty( $bg[$n]["title"] ) && ! empty( $bg[$n]["url"] )) {
+                echo '<div class="caption"><a href="' . $bg[$n]["url"] . '" target="_blank" class="full-link"></a>' . $bg[$n]["title"] . '</div>';
+            } else if ( ! empty( $bg[$n]["title"] )) {
+                echo '<div class="caption">' . $bg[$n]["title"] . '</div>';
+            }
+        ?>
 
         <div class="main">
             <div class="container" ng-controller="myController">
@@ -81,6 +87,8 @@
                     <li><a href="https://twitter.com/jonathanchue" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
                     <li><a href="https://500px.com/jonathanchue" target="_blank"><i class="fa fa-500px"></i><span>500px</span></a></li>
                 </ul>
+
+                <a href="https://squareup.com/store/jonathan-chue" target="_blank" class="button wide-button">Photo Prints</a>
 
                 <ui-view></ui-view>
             </div>

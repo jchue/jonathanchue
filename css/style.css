@@ -27,6 +27,32 @@ a {
   color: #000;
   text-decoration: none; }
 
+.full-link {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.caption {
+  background-color: #fff;
+  display: inline-block;
+  float: right;
+  font-size: 11px;
+  margin: 10px;
+  padding: 8px 10px;
+  position: relative;
+  -webkit-transition: color 0.2s, background 0.2s;
+  -moz-transition: color 0.2s, background 0.2s;
+  -o-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s; }
+  .caption:hover {
+    background-color: #000;
+    color: #fff; }
+  @media (max-width: 480px) {
+    .caption {
+      display: none; } }
+
 .main {
   box-sizing: border-box;
   min-height: 100%;
@@ -47,7 +73,7 @@ a {
     .container {
       box-sizing: border-box;
       max-width: none;
-      padding: 50px 30px;
+      padding: 50px 30px 30px 30px;
       width: 100%; } }
 
 .hr {
@@ -143,6 +169,9 @@ a {
       left: 0;
       text-align: center; } }
 
+.contact {
+  margin-top: 30px; }
+
 form {
   text-align: left;
   width: 100%; }
@@ -173,20 +202,20 @@ button,
   font-weight: normal;
   padding: 10px;
   text-transform: uppercase;
-  -webkit-transition: background .2s;
-  -moz-transition: background .2s;
-  -o-transition: background .2s;
-  transition: background .2s; }
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s; }
   button:hover,
   .button:hover {
-    background-color: #333;
+    background-color: #444;
     cursor: pointer; }
   button:active,
   .button:active {
     padding: 11px 10px 9px 10px; }
   button[disabled],
   .button[disabled] {
-    background-color: #777; }
+    background-color: #999; }
     button[disabled]:hover,
     .button[disabled]:hover {
       cursor: default; }
@@ -195,11 +224,10 @@ button,
       padding: 10px; }
 
 .wide-button {
-  bottom: 0;
   box-sizing: border-box;
+  display: block;
   left: 0;
-  margin: 0;
-  position: absolute;
+  margin: 0 0 1px 0;
   right: 0;
   width: 100%; }
 
@@ -235,10 +263,10 @@ div.success {
 
 ui-view.ng-enter,
 ui-view.ng-leave {
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 ui-view.ng-enter {
   opacity: 0;
