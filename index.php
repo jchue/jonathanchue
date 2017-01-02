@@ -15,7 +15,7 @@
             $ch = curl_init();
 
             // set URL and other appropriate options
-            curl_setopt( $ch, CURLOPT_URL, "http://www.jonathanchue.dev/photos.json" );
+            curl_setopt( $ch, CURLOPT_URL, "http://www.jonathanchue.com/photos.json" );
             // Will return the response, if false it print the response
             curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
             curl_setopt( $ch, CURLOPT_HEADER, 0 );
