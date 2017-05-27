@@ -72,7 +72,7 @@
                 <h1><a href="http://www.jonathanchue.com">Jonathan Chue</a></h1>
 
                 <ul class="roles">
-                    <li>Senior Analyst at Accenture</li>
+                    <li>Consultant at Accenture</li>
                     <li>Front-end Web Developer</li>
                     <li>Amateur Photographer</li>
                 </ul>
@@ -95,7 +95,7 @@
         </div>
 
         <footer class="site-footer">
-            Copyright &copy; 2016 Jonathan Chue
+            Copyright &copy; 2017 Jonathan Chue
         </footer>
 
 
