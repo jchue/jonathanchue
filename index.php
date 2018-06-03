@@ -27,7 +27,7 @@
             curl_close( $ch );
 
             $bg = json_decode( $result, true );
-            $n = rand( 1, 6 );
+            $n = rand( 1, 7 );
             $n--;
 
 
