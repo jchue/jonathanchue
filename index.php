@@ -15,7 +15,7 @@
             $ch = curl_init();
 
             // set URL and other appropriate options
-            curl_setopt( $ch, CURLOPT_URL, "http://www.jonathanchue.com/photos.json" );
+            curl_setopt( $ch, CURLOPT_URL, "https://www.jonathanchue.com/photos.json" );
             // Will return the response, if false it print the response
             curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
             curl_setopt( $ch, CURLOPT_HEADER, 0 );
@@ -69,7 +69,7 @@
 
         <div class="main">
             <div class="container" ng-controller="myController">
-                <h1><a href="http://www.jonathanchue.com">Jonathan Chue</a></h1>
+                <h1><a href="https://www.jonathanchue.com">Jonathan Chue</a></h1>
 
                 <ul class="roles">
                     <li>Consultant at Accenture</li>
@@ -95,7 +95,7 @@
         </div>
 
         <footer class="site-footer">
-            Copyright &copy; 2017 Jonathan Chue
+            Copyright &copy; <?php echo date("Y"); ?> Jonathan Chue
         </footer>
 
 
