@@ -1,96 +1,115 @@
 {
     "0": {
         "file": "DSC_0082-0084_pano",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "1": {
         "file": "DSC_0085",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "2": {
         "file": "DSC_0092-0093_pano",
+        "position": "center",
         "title": "Golden Hour in La Jolla",
         "url": "https://shop.jonathanchue.com/product/golden-hour-in-la-jolla/"
     },
     "3": {
         "file": "DSC_0093",
+        "position": "top",
         "title": "Yonder",
         "url": "https://shop.jonathanchue.com/product/yonder/"
     },
     "4": {
         "file": "DSC_0101",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "5": {
         "file": "DSC_0244",
+        "position": "top",
         "title": "Sixth Stret Viaduct",
         "url": "https://shop.jonathanchue.com/product/sixth-street-viaduct/"
     },
     "6": {
         "file": "DSC_00132",
+        "position": "bottom",
         "title": "",
         "url": ""
     },
     "7": {
         "file": "DSC_0083",
+        "position": "center",
         "title": "",
         "url": ""
     },
     "8": {
         "file": "DSC_0104",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "9": {
         "file": "DSC_0181-0182_pano",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "10": {
         "file": "DSC_0028",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "11": {
         "file": "DSC_0030",
+        "position": "center",
         "title": "",
         "url": ""
     },
     "12": {
         "file": "DSC_0066",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "13": {
         "file": "DSC_0071",
+        "position": "center",
         "title": "",
         "url": ""
     },
     "14": {
         "file": "DSC_0092-0093_pano-2",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "15": {
         "file": "DSC_0104-2",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "16": {
         "file": "DSC_0120",
+        "position": "center",
         "title": "",
         "url": ""
     },
     "17": {
         "file": "DSC_0121",
+        "position": "top",
         "title": "",
         "url": ""
     },
     "18": {
         "file": "DSC_0141",
+        "position": "center",
         "title": "",
         "url": ""
     }

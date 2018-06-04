@@ -35,6 +35,7 @@
             html {
                 background-attachment: fixed;
                 background-image: url(images/' . $bg[$n]["file"] . '.jpg);
+                background-position: center ' . $bg[$n]["position"] . ';
                 background-repeat: no-repeat;
                 background-size: cover !important;
             }
