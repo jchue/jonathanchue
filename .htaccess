@@ -1,3 +1,5 @@
+Header set Cache-Control "max-age=604800, public"
+
 RewriteEngine on
 
 RewriteRule .*\.()$ - [F,NC]
