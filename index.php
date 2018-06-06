@@ -42,10 +42,9 @@
         </style>';
 
          ?>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-animate.min.js"></script>
         <script src="js/script.js"></script>
 
     </head>
