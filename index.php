@@ -6,7 +6,7 @@
         <meta name="description" content="Consultant, front-end web developer, amateur photographer.">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
