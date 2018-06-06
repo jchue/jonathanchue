@@ -45,7 +45,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
         <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-animate.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/script.min.js"></script>
 
     </head>
     <body>
