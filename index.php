@@ -79,7 +79,7 @@
 
                 <div class="hr"></div>
 
-                <p>Looking for collaborations.  Use the Contact button or reach out to me on social media if you have any cool projects!</p>
+                <p class="subtitle">Looking for collaborations.  Use the Contact button or reach out to me on social media if you have any cool projects!</p>
 
                 <div class="hr"></div>
 

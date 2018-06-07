@@ -34,10 +34,6 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-style: italic;
-}
-
 .full-link {
     bottom: 0;
     left: 0;
@@ -121,6 +117,11 @@ p {
             border-right: none;
         }
     }
+}
+
+.subtitle {
+    font-style: italic;
+    margin: -15px 0 15px 0;
 }
 
 .links {
