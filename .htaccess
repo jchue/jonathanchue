@@ -1,17 +1,3 @@
-# Set the cache-control max-age
-# 1 YEAR
-<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-Header set Cache-Control "max-age=31449600, public"
-</FilesMatch>
-# 1 MONTH
-<FilesMatch ".(xml|txt)$">
-Header set Cache-Control "max-age=2419200, public, must-revalidate"
-</FilesMatch>
-# 1 WEEK
-<FilesMatch ".(html|htm)$">
-Header set Cache-Control "max-age=604800, must-revalidate"
-</FilesMatch>
-
 RewriteEngine on
 
 RewriteRule .*\.()$ - [F,NC]
