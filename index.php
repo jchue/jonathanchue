@@ -79,6 +79,10 @@
 
                 <div class="hr"></div>
 
+                <p>Looking for collaborations.  Use the Contact button or reach out to me on social media if you have any cool projects!</p>
+
+                <div class="hr"></div>
+
                 <ul class="links">
                     <li><a href="http://www.aptribute.com" target="_blank"><i class="fa fa-laptop"></i><span>Web Dev Portfolio</span></a></li>
                     <li><a href="https://www.flickr.com/photos/96956660@N06/" target="_blank"><i class="fa fa-flickr"></i><span>Flickr</span></a></li>
