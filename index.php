@@ -27,9 +27,7 @@
             curl_close( $ch );
 
             $bg = json_decode( $result, true );
-            $n = rand( 1, 19 );
-            $n--;
-
+            $n = rand( 1, ( count( $bg ) - 1 ) );
 
         echo '<style>
             html {
@@ -101,7 +99,6 @@
         <footer class="site-footer">
             Copyright &copy; <?php echo date("Y"); ?> Jonathan Chue
         </footer>
-
 
     </body>
 </html>
