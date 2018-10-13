@@ -92,6 +92,8 @@
                     <li><a href="https://500px.com/jonathanchue" target="_blank"><i class="fa fa-500px"></i><span>500px</span></a></li>
                 </ul>
 
+                <a href="https://jonathanchue.darkroom.tech" target="_blank" class="button wide-button">Photo Prints</a>
+
                 <ui-view></ui-view>
             </div>
         </div>
