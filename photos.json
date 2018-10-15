@@ -33,7 +33,7 @@
         "file": "DSC_00132",
         "position": "bottom",
         "title": "Supersonic | Kansas City, MO",
-        "url": ""
+        "url": "https://jonathanchue.darkroom.tech/?post=53277"
     },
     "6": {
         "file": "DSC_0083",
@@ -45,7 +45,7 @@
         "file": "DSC_0104",
         "position": "top",
         "title": "Boats and Morro Rock | Morro Bay, CA",
-        "url": ""
+        "url": "https://jonathanchue.darkroom.tech/?post=53278"
     },
     "8": {
         "file": "DSC_0181-0182_pano",
@@ -106,5 +106,29 @@
         "position": "center",
         "title": "San Francisco, CA",
         "url": ""
+    },
+    "18": {
+        "file": "DSC_0157-0158_pano",
+        "position": "center",
+        "title": "Morro Bay, CA",
+        "url": ""
+    },
+    "19": {
+        "file": "DSC_6500-6507_pano2",
+        "position": "center",
+        "title": "Oahu, HI",
+        "url": ""
+    },
+    "20": {
+        "file": "DSC_7946-8003_pano",
+        "position": "center",
+        "title": "Ventura, CA",
+        "url": ""
+    },
+    "21": {
+        "file": "DSC_9400",
+        "position": "center",
+        "title": "Red Rock Canyon, NV",
+        "url": "https://jonathanchue.darkroom.tech/?post=53178"
     }
 }
