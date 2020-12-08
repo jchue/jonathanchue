@@ -3,18 +3,18 @@
     <h1><router-link to="/">Jonathan Chue</router-link></h1>
 
     <ul class="roles">
-        <li>Consultant at Accenture</li>
-        <li>Front-end Web Developer</li>
+        <li>Technology Consultant</li>
+        <li>Web Developer</li>
         <li>Amateur Photographer</li>
     </ul>
 
     <hr>
 
     <ul class="links">
-        <li><a href="http://www.aptribute.com" target="_blank"><font-awesome-icon v-bind:icon="['fas', 'laptop']"></font-awesome-icon><span class="label">Web Dev Portfolio</span></a></li>
-        <li><a href="https://www.flickr.com/photos/96956660@N06/" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'flickr']"></font-awesome-icon><span class="label">Flickr</span></a></li>
-        <li><a href="https://www.instagram.com/jonathanchue/" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'instagram']"></font-awesome-icon><span class="label">Instagram</span></a></li>
         <li><a href="https://www.linkedin.com/in/jonathan-chue-2b83b233" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'linkedin']"></font-awesome-icon><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/jchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'github']"></font-awesome-icon><span class="label">GitHub</span></a></li>
+        <li><a href="http://www.aptribute.com" target="_blank"><font-awesome-icon v-bind:icon="['fas', 'laptop']"></font-awesome-icon><span class="label">Past Websites</span></a></li>
+        <li><a href="https://www.instagram.com/jonathanchue/" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'instagram']"></font-awesome-icon><span class="label">Instagram</span></a></li>
         <li><a href="https://twitter.com/jonathanchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'twitter']"></font-awesome-icon><span class="label">Twitter</span></a></li>
         <li><a href="https://500px.com/jonathanchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', '500px']"></font-awesome-icon><span class="label">500px</span></a></li>
     </ul>
@@ -28,13 +28,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 import {
   faFlickr,
+  faGithub,
   faInstagram,
   faLinkedin,
   faTwitter,
   fa500px,
 } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faLaptop, faFlickr, faInstagram, faLinkedin, faTwitter, fa500px);
+library.add(faLaptop, faFlickr, faGithub, faInstagram, faLinkedin, faTwitter, fa500px);
 
 export default {
   name: 'Hello',
