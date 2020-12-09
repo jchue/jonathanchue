@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1><router-link to="/">Jonathan Chue</router-link></h1>
+    <router-link to="/" id="site-title">Jonathan Chue</router-link>
 
     <ul class="roles">
         <li>Technology Consultant</li>
@@ -52,6 +52,16 @@ export default {
 $breakpoint-small: 400px;
 $breakpoint-med: 480px;
 
+#site-title {
+  color: #000;
+  display: block;
+  font-family: "Roboto Condensed", "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  font-weight: normal;
+  margin: 0 auto 0.625rem;
+  text-transform: uppercase;
+}
+
 hr {
   background-color: #000;
   border: none;
@@ -98,12 +108,13 @@ hr {
     }
 
     a {
-        padding: 0 0.625rem;
+      color: #000;
+      padding: 0 0.625rem;
 
-        @media (max-width: $breakpoint-small) {
-            display: block;
-            padding: 0.125rem 0;
-        }
+      @media (max-width: $breakpoint-small) {
+          display: block;
+          padding: 0.125rem 0;
+      }
     }
 
     .label {

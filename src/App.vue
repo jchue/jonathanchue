@@ -44,6 +44,16 @@ export default {
       return new Date().getFullYear();
     },
   },
+  watch: {
+    $route() {
+      /* Clear noindex */
+      const noIndex = document.getElementById('noindex');
+
+      if (noIndex) {
+        noIndex.remove();
+      }
+    },
+  },
   async mounted() {
     const url = `${process.env.VUE_APP_SERVICES}/photo`;
     const photo = (await axios.get(url)).data.data;
@@ -90,14 +100,20 @@ h1 {
   font-size: 1.375rem;
   font-weight: normal;
   margin: 0 auto 0.625rem;
-  position: relative;
   text-transform: uppercase;
-  z-index: 2;
+}
+
+p {
+  margin: 0 0 1rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 a {
-    color: #000;
-    text-decoration: none;
+  color: #c19749;
+  text-decoration: none;
 }
 
 #app {
@@ -148,9 +164,13 @@ a {
   }
 }
 
-a.caption:hover {
-  background-color: #000;
-  color: #fff;
+a.caption {
+  color: #000;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .site-footer {
