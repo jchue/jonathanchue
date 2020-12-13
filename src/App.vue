@@ -72,6 +72,7 @@ export default {
 
 <style lang="scss">
 @import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
 
 $breakpoint-small: 400px;
 $breakpoint-med: 480px;
