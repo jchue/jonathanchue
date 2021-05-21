@@ -1,6 +1,7 @@
 <template>
   <a v-if="background.title && background.url" v-bind:href="background.url"
   target="_blank" class="caption full-link">
+    <font-awesome-icon v-bind:icon="['fas', 'external-link-alt']"></font-awesome-icon>
     {{ background.title }}
   </a>
   <div v-else-if="background.title" class="caption">
@@ -24,10 +25,16 @@
 <script>
 import axios from 'axios';
 import Hello from '@/components/Hello.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faExternalLinkAlt);
 
 export default {
   components: {
     Hello,
+    FontAwesomeIcon,
   },
   data() {
     return {
@@ -154,11 +161,15 @@ a {
   background-color: #fff;
   display: block;
   float: right;
-  font-size: 11px;
-  margin: 10px;
-  padding: 8px 10px;
+  font-size: 0.688rem;
+  margin: 0.625rem;
+  padding: 0.5rem 0.625rem;
   position: relative;
   transition: color 0.2s, background 0.2s;
+
+  svg {
+    margin-right: 0.2rem;
+  }
 
   @media (max-width: $breakpoint-med) {
       display: none;
