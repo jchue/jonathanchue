@@ -24,10 +24,10 @@
 
 <script>
 import axios from 'axios';
-import Hello from '@/components/Hello.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import Hello from '@/components/Hello.vue';
 
 library.add(faExternalLinkAlt);
 
