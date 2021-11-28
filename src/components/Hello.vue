@@ -14,7 +14,6 @@
         <li><a href="https://www.linkedin.com/in/jonathan-chue-2b83b233" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'linkedin']"></font-awesome-icon><span class="label">LinkedIn</span></a></li>
         <li><a href="https://github.com/jchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'github']"></font-awesome-icon><span class="label">GitHub</span></a></li>
         <li><a href="https://www.instagram.com/jonathanchue/" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'instagram']"></font-awesome-icon><span class="label">Instagram</span></a></li>
-        <li><a href="https://twitter.com/jonathanchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', 'twitter']"></font-awesome-icon><span class="label">Twitter</span></a></li>
         <li><a href="https://500px.com/jonathanchue" target="_blank"><font-awesome-icon v-bind:icon="['fab', '500px']"></font-awesome-icon><span class="label">500px</span></a></li>
     </ul>
 
