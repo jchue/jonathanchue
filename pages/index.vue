@@ -166,16 +166,16 @@ a.caption {
 }
 
 .site-footer {
-  box-sizing: border-box;
+  bottom: 0.5rem;
   color: #fff;
   font-size: 0.75rem;
-  height: 1.25rem;
-  margin-top: -1.25rem;
-  padding-right: 1rem;
+  left: 0;
+  position: absolute;
+  right: 1rem;
   text-align: right;
 
   @media (max-width: $breakpoint-small) {
-    left: 0;
+    right: 0;
     text-align: center;
   }
 }

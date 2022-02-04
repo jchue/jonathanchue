@@ -61,7 +61,7 @@ hr {
   background-color: #000;
   border: none;
   height: 1px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 1rem auto;
   width: 90%;
 
   @media (max-width: $breakpoint-small) {
@@ -139,7 +139,7 @@ hr {
 
     &:hover .label {
       opacity: 1;
-      top: -1.25rem;
+      top: 2rem;
       z-index: 1;
     }
   }
