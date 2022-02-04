@@ -35,10 +35,10 @@ export default Vue.extend({
   data() {
     return {
       background: {
-        file: 'DSC_0092-0093_pano.jpg',
-        position: 'top',
-        title: 'Golden Hour in La Jolla | San Diego, CA',
-        url: 'https://jonathanchue.darkroom.tech/products/49197',
+        path: '',
+        position: '',
+        title: '',
+        url: '',
       },
     };
   },
@@ -47,14 +47,39 @@ export default Vue.extend({
       return new Date().getFullYear();
     },
   },
-  mounted() {
+  async mounted() {
+    const photo = await this.getRandomPhoto();
+
+    this.background.path = require(`~/assets/${photo.file}`);
+    this.background.position = photo.position;
+    this.background.title = photo.title;
+    this.background.url = photo.url;
+
     const styleElement = document.createElement('style');
     styleElement.innerHTML = `html {
-      background-image: url('https://jonathanchue.com/images/${this.background.file}');
+      background-image: url('${this.background.path}');
       background-position: center ${this.background.position};
     }`;
     document.head.appendChild(styleElement);
   },
+  methods: {
+    getPhotos: async function(): Promise<any> {
+      const photos = await this.$content()
+        .where({ slug: 'photos' })
+        .fetch()
+        .catch((err) => {
+          new Error('Page not found');
+        });
+
+      return photos;
+    },
+    getRandomPhoto: async function() {
+      const photos = await this.getPhotos();
+      const index = Math.floor(Math.random() * (photos.length - 1));
+
+      return photos[index];
+    }
+  }
 })
 </script>
 
@@ -76,10 +101,10 @@ html {
 }
 
 body {
-  background-image: url('https://www.jonathanchue.com/images/background.png');
+  background-image: url('~assets/background.png');
   color: #000;
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
