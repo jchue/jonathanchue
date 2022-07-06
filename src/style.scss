@@ -1,89 +1,5 @@
-<template>
-  <div>
-    <a v-if="background.title && background.url" v-bind:href="background.url"
-    target="_blank" class="caption full-link">
-      <font-awesome-icon v-bind:icon="['fas', 'external-link-alt']"></font-awesome-icon>
-      {{ background.title }}
-    </a>
-    <div v-else-if="background.title" class="caption">
-      {{ background.title }}
-    </div>
-    <div class="main">
-      <div class="container">
-        <Hello></Hello>
-      </div>
-    </div>
-    <footer class="site-footer">
-      Copyright &copy; {{ year }} Jonathan Chue
-    </footer>
-  </div>
-</template>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
 
-<script lang="ts">
-import Vue from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faExternalLinkAlt);
-
-export default Vue.extend({
-  name: 'IndexPage',
-  components: {
-    FontAwesomeIcon,
-  },
-  data() {
-    return {
-      background: {
-        path: '',
-        position: '',
-        title: '',
-        url: '',
-      },
-    };
-  },
-  computed: {
-    year() {
-      return new Date().getFullYear();
-    },
-  },
-  async mounted() {
-    const photo = await this.getRandomPhoto();
-
-    this.background.path = require(`~/assets/${photo.file}`);
-    this.background.position = photo.position;
-    this.background.title = photo.title;
-    this.background.url = photo.url;
-
-    const styleElement = document.createElement('style');
-    styleElement.innerHTML = `html {
-      background-image: url('${this.background.path}');
-      background-position: center ${this.background.position};
-    }`;
-    document.head.appendChild(styleElement);
-  },
-  methods: {
-    getPhotos: async function(): Promise<any> {
-      const photos = await this.$content()
-        .where({ slug: 'photos' })
-        .fetch()
-        .catch((err) => {
-          new Error('Page not found');
-        });
-
-      return photos;
-    },
-    getRandomPhoto: async function() {
-      const photos = await this.getPhotos();
-      const index = Math.floor(Math.random() * (photos.length - 1));
-
-      return photos[index];
-    }
-  }
-})
-</script>
-
-<style lang="scss">
 $breakpoint-small: 400px;
 $breakpoint-med: 480px;
 
@@ -99,7 +15,7 @@ html {
 }
 
 body {
-  background-image: url('~assets/background.png');
+  background-image: url('./assets/background.png');
   color: #000;
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -170,8 +86,14 @@ a {
   position: relative;
   transition: color 0.2s, background 0.2s;
 
+  .icon {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
   svg {
     margin-right: 0.2rem;
+    transition: all 0.2s;
   }
 
   @media (max-width: $breakpoint-med) {
@@ -185,6 +107,10 @@ a.caption {
   &:hover {
     background-color: #000;
     color: #fff;
+
+    svg {
+      fill: #fff;
+    }
   }
 }
 
@@ -255,4 +181,106 @@ button,
   right: 0;
   width: 100%;
 }
-</style>
+
+#site-title {
+  color: #000;
+  display: block;
+  font-family: "Roboto Condensed", "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  font-weight: normal;
+  margin: 0 auto 0.625rem;
+  text-transform: uppercase;
+}
+
+hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  margin: 0 auto 1rem auto;
+  width: 90%;
+
+  @media (max-width: $breakpoint-small) {
+    width: 100%;
+  }
+}
+
+.roles {
+  padding-left: 0;
+  margin: 0 0 1rem;
+
+  li {
+    display: block;
+  }
+}
+
+.links {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    font-size: 1.25rem;
+    list-style-type: none;
+
+    @media (max-width: $breakpoint-small) {
+      display: block;
+      left: 0;
+      position: relative;
+      text-align: left;
+      transition: left 0.15s ease-in-out;
+
+      &:hover {
+        left: 0.625rem;
+      }
+    }
+
+    a {
+      color: #000;
+      padding: 0 0.625rem;
+
+      @media (max-width: $breakpoint-small) {
+          display: block;
+          padding: 0.125rem 0;
+      }
+    }
+
+    .icon {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+
+    .label {
+      display: block;
+      font-family: Arial;
+      font-size: 0.75rem;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      right: 0;
+      text-transform: uppercase;
+      top: 0;
+      transition: opacity 0.25s ease-in-out, top 0.2s ease-in-out;
+      z-index: -1;
+
+      @media (max-width: $breakpoint-small) {
+        display: inline;
+        font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-left: 0.5rem;
+        opacity: 1;
+        position: static;
+      }
+    }
+
+    &:hover .label {
+      opacity: 1;
+      top: 2rem;
+      z-index: 1;
+    }
+  }
+}

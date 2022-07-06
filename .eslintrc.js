@@ -1,15 +1,16 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
-    node: true
+    es2021: true,
+    node: true,
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended'
+    'airbnb-base',
   ],
-  plugins: [
-  ],
-  // add your custom rules here
-  rules: {}
-}
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+  },
+};
