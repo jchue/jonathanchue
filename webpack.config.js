@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   devtool: process.env.NODE_ENV === 'production' ? false : 'inline-source-map',
   devServer: {
     static: './dist',
@@ -19,6 +19,7 @@ module.exports = {
   optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
+      '...',
     ],
     runtimeChunk: 'single',
   },
@@ -35,6 +36,19 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+          'ts-loader',
+        ],
+      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
@@ -64,5 +78,8 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
 };
